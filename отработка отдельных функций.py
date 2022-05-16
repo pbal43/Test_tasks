@@ -8,12 +8,13 @@ import subprocess
 #     ss = calling_output.decode('cp866')
 #     print(ss)
 # # Отработка текста ошибки
-# x = 'cd unknown'
-# x_x = os.system(x)
-# if x_x == 1:
-#     output = subprocess.getoutput(x)
-#     z = output.encode('cp1251')
-#     print(z.decode('cp866'))
+x = 'cd unknown'
+x_x = os.system(x)
+if x_x == 1:
+    output = subprocess.getoutput(x)
+    z = output.encode('cp1251')
+    if z.decode('cp866') == 'Системе не удается найти указанный путь.':
+        print('ээх')
 # отработка тела функции
 # ld_1 = str.upper(str.strip(input('Введите наименование локального диска, где создана тестовая директория,\nявляющейся основной для тестирования - туда будет загружен результат тестирования в созданнную скриптом папку result\n')))
 # checker = 'echo %cd%'
