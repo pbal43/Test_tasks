@@ -200,8 +200,8 @@ while True:
         if x_x == 0:
             calling_output = subprocess.check_output(x, shell=True)
             ss = calling_output.decode('cp866')
-            z_z = r'\test2\2'
-            yy = f"{ld_2}:" + z_z
+            z_z = r'\test\main'
+            yy = f"{ld_1}:" + z_z
             if ss == yy:
                 with open(results, 'a') as m_r_w_wd_rep:
                     m_r_w_wd_rep.write(r'Попытка перехода на другой диск без /d не осуществлена')

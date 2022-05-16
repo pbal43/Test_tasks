@@ -1,6 +1,6 @@
 import os
 import subprocess
-# # Сравнивает пути - чекер
+# # Сравнивает пути - чекер - не работает из-за невозможности последовательных команд
 # x = r'echo %cd%'
 # x_x = os.system(x)
 # if x_x == 0:
@@ -39,4 +39,15 @@ import subprocess
 #             m_r_rep.write('Баг! Переход во вложенный каталог на 1 уровень не осуществлен с указанием полного пути!')
 #         break
 
-# отработаем ошибочку
+# Рабочий цикл:
+# while True:
+#     fr_main_to_res_f = 'cd result'
+#     m_r_f = os.system(fr_main_to_res_f)
+#     if m_r_f == 0:
+#         with open(results, 'a') as m_r_f_rep:
+#                     m_r_f_rep.write('Переход во вложенный каталог на 1 уровень успешен с указанием папки')
+#         break
+#     else:
+#         with open(results, 'a') as m_r_f_rep:
+#             m_r_f_rep.write('Баг! Переход во вложенный каталог на 1 уровень не осуществлен с указанием папки!')
+#         break
